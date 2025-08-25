@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devansh Patira — Portfolio</title>
+  <meta name="description" content="AI/ML & Web Developer — Portfolio" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="row nav">
+      <a class="brand" href="#home">Devansh</a>
+      <ul class="nav__items">
+        <li><a class="nav__link" href="#home">Home</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#skills">Skills</a></li>
+        <li><a class="nav__link" href="#projects">Projects</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- HERO -->
+    <div class="row header__text-box" id="home">
+      <div class="hero__wrap">
+        <div class="hero__photo">
+          <!-- Replace avatar.jpg with your file name if different -->
+          <img src="avatar.jpg" alt="Devansh Patira">
+        </div>
+
+        <h1 class="heading-primary">
+          <span>Hi, I'm <b>Devansh Mehta</b></span>
+        </h1>
+
+        <p class="tagline">
+          <span id="typeTarget"></span><i class="caret">|</i>
+        </p>
+
+        <p class="sub">
+          Passionate developer exploring cutting-edge technologies in <b>AI</b>, web development, and <b>data science</b>.
+        </p>
+
+        <div class="cta">
+          <a class="btn btn--pink" href="#projects">View My Work</a>
+          <a class="btn" href="#contact">Get In Touch</a>
+        </div>
+
+        <div class="hero__socials">
+          <a href="https://github.com/your-username" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:your.email@example.com">Email</a>
+        </div>
+      </div>
+      <div class="hero__bg"></div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="row about__content">
+      <div>
+        <h2>About me</h2>
+        <p class="muted">
+          B.E. Artificial Intelligence & Data Science student @ Marwadi University.
+          I love building clean, fast user experiences and real-world AI projects.
+          Currently learning German (A1) and working on AI + Space and Home Automation prototypes.
+        </p>
+        <a class="btn" href="resume.pdf" download>Download Resume</a>
+      </div>
+      <img src="avatar.jpg" alt="Devansh Patira" class="about__photo">
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="work" id="skills">
+    <div class="row">
+      <h2>Skills &amp; Expertise</h2>
+      <p class="muted">Edit the names & percentages in HTML — bars will animate automatically.</p>
+
+      <div class="skills__grid">
+        <div class="skill">
+          <div class="skill__head">
+            <h3>Programming</h3>
+          </div>
+          <div class="skill__row"><span>Python</span><span>85%</span></div>
+          <div class="skill__bar" data-percent="85"><span class="skill__fill"></span></div>
+
+          <div class="skill__row"><span>JavaScript</span><span>80%</span></div>
+          <div class="skill__bar" data-percent="80"><span class="skill__fill"></span></div>
+
+          <div class="skill__row"><span>C++</span><span>65%</span></div>
+          <div class="skill__bar" data-percent="65"><span class="skill__fill"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill__head"><h3>Frameworks</h3></div>
+          <div class="skill__row"><span>React.js</span><span>80%</span></div>
+          <div class="skill__bar" data-percent="80"><span class="skill__fill"></span></div>
+
+          <div class="skill__row"><span>Next.js</span><span>75%</span></div>
+          <div class="skill__bar" data-percent="75"><span class="skill__fill"></span></div>
+
+          <div class="skill__row"><span>TensorFlow</span><span>60%</span></div>
+          <div class="skill__bar" data-percent="60"><span class="skill__fill"></span></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill__head"><h3>Cloud & DevOps</h3></div>
+          <div class="skill__row"><span>AWS</span><span>75%</span></div>
+          <div class="skill__bar" data-percent="75"><span class="skill__fill"></span></div>
+
+          <div class="skill__row"><span>REST APIs</span><span>85%</span></div>
+          <div class="skill__bar" data-percent="85"><span class="skill__fill"></span></div>
+
+          <div class="skill__row"><span>Network Security</span><span>60%</span></div>
+          <div class="skill__bar" data-percent="60"><span class="skill__fill"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="work" id="projects">
+    <div class="row">
+      <h2>Projects</h2>
+      <div class="work__boxes">
+        <a class="work__box" href="https://github.com/your-username/aistronomy" target="_blank">
+          <div class="work__text">
+            <h3>AIstronomy: A New Era of Space Discovery</h3>
+            <ul class="work__list">
+              <li>Slides</li><li>Case Studies</li><li>Live Demo</li>
+            </ul>
+            <span class="link__text">Open <span>↗</span></span>
+          </div>
+          <div class="work__image-box">
+            <img class="work__image" src="project1.jpg" alt="AIstronomy">
+          </div>
+        </a>
+
+        <a class="work__box" href="https://github.com/your-username/job-matching" target="_blank">
+          <div class="work__text">
+            <h3>Job Matching System (Graph-Based)</h3>
+            <ul class="work__list">
+              <li>Hungarian Algorithm</li><li>Python</li><li>Graphs</li>
+            </ul>
+            <span class="link__text">Open <span>↗</span></span>
+          </div>
+          <div class="work__image-box">
+            <img class="work__image" src="project2.jpg" alt="Job Matching">
+          </div>
+        </a>
+
+        <a class="work__box" href="https://github.com/your-username/aws-rekognition" target="_blank">
+          <div class="work__text">
+            <h3>Image Recognition on AWS</h3>
+            <ul class="work__list">
+              <li>Lambda</li><li>Rekognition</li><li>S3</li>
+            </ul>
+            <span class="link__text">Open <span>↗</span></span>
+          </div>
+          <div class="work__image-box">
+            <img class="work__image" src="project3.jpg" alt="AWS Recognition">
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="row contact__info">
+      <h2>Contact</h2>
+      <p class="muted">Open to internships, collaborations, and speaking invites.</p>
+      <div class="cta">
+        <a class="btn btn--pink" href="mailto:your.email@example.com">Email Me</a>
+        <a class="btn" href="https://github.com/your-username" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/your-handle" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Back to top -->
+  <footer class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li><a href="#home">Back to top</a></li>
+      </ul>
+      <p>© <span id="y"></span> Devansh Patira</p>
+    </div>
+    <a href="#home" class="back-to-top" id="backTop" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
