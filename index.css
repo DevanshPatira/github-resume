@@ -206,7 +206,7 @@ body{
 
 /* WhatsApp hover color */
 .footer-social a[data-brand="whatsapp"]:hover {
-  background: #25D366; /* WhatsApp green */
+  background: #25D366;
   border-color: transparent;
   color: #fff;
 }
