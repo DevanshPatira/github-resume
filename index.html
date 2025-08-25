@@ -1,200 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Devansh Patira — Portfolio</title>
-  <meta name="description" content="AI/ML & Web Developer — Portfolio" />
-  <link rel="stylesheet" href="index.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <meta name="description" content="AI Engineer & Full-Stack Developer building human-centered products." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🚀%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="Devansh Patira — Portfolio" />
+  <meta property="og:description" content="AI Engineer & Full-Stack Developer building human-centered products." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f172a" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Devansh Patira",
+    "url":"https://yourdomain.dev",
+    "sameAs":["https://github.com/yourname","https://www.linkedin.com/in/yourname/"],
+    "jobTitle":"AI Engineer • Full-Stack Developer"
+  }
+  </script>
 </head>
 <body>
-
-  <!-- Header / Nav -->
-  <header class="header">
-    <div class="row nav">
-      <a class="brand" href="#home">Devansh</a>
-      <ul class="nav__items">
-        <li><a class="nav__link" href="#home">Home</a></li>
-        <li><a class="nav__link" href="#about">About</a></li>
-        <li><a class="nav__link" href="#skills">Skills</a></li>
-        <li><a class="nav__link" href="#projects">Projects</a></li>
-        <li><a class="nav__link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- HERO -->
-    <div class="row header__text-box" id="home">
-      <div class="hero__wrap">
-        <div class="hero__photo">
-          <!-- Replace avatar.jpg with your file name if different -->
-          <img src="avatar.jpg" alt="Devansh Patira">
-        </div>
-
-        <h1 class="heading-primary">
-          <span>Hi, I'm <b>Devansh Patira</b></span>
-        </h1>
-
-        <p class="tagline">
-          <span id="typeTarget"></span><i class="caret">|</i>
-        </p>
-
-        <p class="sub">
-          Passionate developer exploring cutting-edge technologies in <b>AI</b>, web development, and <b>data science</b>.
-        </p>
-
-        <div class="cta">
-          <a class="btn btn--pink" href="#projects">View My Work</a>
-          <a class="btn" href="#contact">Get In Touch</a>
-        </div>
-
-        <div class="hero__socials">
-          <a href="https://github.com/your-username" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="mailto:your.email@example.com">Email</a>
-        </div>
-      </div>
-      <div class="hero__bg"></div>
+  <!-- Header -->
+  <header class="site-header" data-header>
+    <a href="#" class="brand">DP<span class="dot">.</span></a>
+    <nav class="nav" data-nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--ghost" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" aria-label="Toggle theme" id="themeToggle" title="Toggle theme">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn only-mobile" aria-label="Open menu" id="menuToggle" title="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </header>
 
-  <!-- About -->
-  <section class="about" id="about">
-    <div class="row about__content">
-      <div>
-        <h2>About me</h2>
-        <p class="muted">
-          B.E. Artificial Intelligence & Data Science student @ Marwadi University.
-          I love building clean, fast user experiences and real-world AI projects.
-          Currently learning German (A1) and working on AI + Space and Home Automation prototypes.
-        </p>
-        <a class="btn" href="resume.pdf" download>Download Resume</a>
+  <!-- Mobile drawer -->
+  <aside class="drawer" id="drawer">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </aside>
+  <div class="overlay" id="overlay" tabindex="-1" aria-hidden="true"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__content">
+      <div class="chip">Available for internships 2025</div>
+      <h1>Hi, I’m <span class="grad">Devansh</span> — I build <span class="underline">human-centered AI</span> and delightful web apps.</h1>
+      <p class="lead">From graph-based job matching to serverless ML on AWS, I turn messy ideas into clean, scalable systems.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn btn--ghost" href="#contact">Contact Me</a>
       </div>
-      <img src="avatar.jpg" alt="Devansh Patira" class="about__photo">
+      <ul class="socials">
+        <li><a href="https://github.com/yourname" aria-label="GitHub">🐙</a></li>
+        <li><a href="https://linkedin.com/in/yourname" aria-label="LinkedIn">🔗</a></li>
+        <li><a href="mailto:devansh@example.com" aria-label="Email">✉️</a></li>
+        <li><a href="https://yourdomain.dev" aria-label="Website">🌐</a></li>
+      </ul>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <div class="orb orb--1"></div>
+      <div class="orb orb--2"></div>
+      <div class="orb orb--3"></div>
+      <div class="grid-bg"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="section__head">
+      <h2>About</h2>
+      <p>AI Engineer & Full-Stack Developer based in Rajkot, India.</p>
+    </div>
+    <div class="about">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/9919?v=4" alt="Devansh avatar" />
+      <div class="about__text">
+        <p>I love shipping useful things. Recently I built a graph-based job matcher, a space-weather forecasting system, and a serverless home-automation pipeline.</p>
+        <p>Tools I enjoy: Python, PyTorch, Next.js, AWS (Lambda, IoT, API Gateway), Postgres, Docker.</p>
+        <div class="stats">
+          <div><span class="num" data-count="20">0</span><span>+ Projects</span></div>
+          <div><span class="num" data-count="5">0</span><span>ML Models in Prod</span></div>
+          <div><span class="num" data-count="3">0</span><span>Hackathon Wins</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section class="work" id="skills">
-    <div class="row">
-      <h2>Skills &amp; Expertise</h2>
-      <p class="muted">Edit the names & percentages in HTML — bars will animate automatically.</p>
-
-      <div class="skills__grid">
-        <div class="skill">
-          <div class="skill__head">
-            <h3>Programming</h3>
-          </div>
-          <div class="skill__row"><span>Python</span><span>85%</span></div>
-          <div class="skill__bar" data-percent="85"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>JavaScript</span><span>80%</span></div>
-          <div class="skill__bar" data-percent="80"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>C++</span><span>65%</span></div>
-          <div class="skill__bar" data-percent="65"><span class="skill__fill"></span></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill__head"><h3>Frameworks</h3></div>
-          <div class="skill__row"><span>React.js</span><span>80%</span></div>
-          <div class="skill__bar" data-percent="80"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>Next.js</span><span>75%</span></div>
-          <div class="skill__bar" data-percent="75"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>TensorFlow</span><span>60%</span></div>
-          <div class="skill__bar" data-percent="60"><span class="skill__fill"></span></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill__head"><h3>Cloud & DevOps</h3></div>
-          <div class="skill__row"><span>AWS</span><span>75%</span></div>
-          <div class="skill__bar" data-percent="75"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>REST APIs</span><span>85%</span></div>
-          <div class="skill__bar" data-percent="85"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>Network Security</span><span>60%</span></div>
-          <div class="skill__bar" data-percent="60"><span class="skill__fill"></span></div>
-        </div>
-      </div>
+  <section id="skills" class="section">
+    <div class="section__head">
+      <h2>Skills</h2>
+      <p>A quick snapshot of strengths.</p>
+    </div>
+    <div class="skills">
+      <div class="pill">Python</div>
+      <div class="pill">C++</div>
+      <div class="pill">JavaScript</div>
+      <div class="pill">PyTorch</div>
+      <div class="pill">Next.js</div>
+      <div class="pill">Postgres</div>
+      <div class="pill">AWS</div>
+      <div class="pill">Docker</div>
+      <div class="pill">MLOps</div>
+      <div class="pill">Graph Theory</div>
+    </div>
+    <div class="meter-group">
+      <div class="meter"><span style="--val:92%">JavaScript</span></div>
+      <div class="meter"><span style="--val:95%">Python</span></div>
+      <div class="meter"><span style="--val:88%">PyTorch</span></div>
+      <div class="meter"><span style="--val:80%">AWS</span></div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section class="work" id="projects">
-    <div class="row">
+  <section id="projects" class="section">
+    <div class="section__head">
       <h2>Projects</h2>
-      <div class="work__boxes">
-        <a class="work__box" href="https://github.com/your-username/aistronomy" target="_blank">
-          <div class="work__text">
-            <h3>AIstronomy: A New Era of Space Discovery</h3>
-            <ul class="work__list">
-              <li>Slides</li><li>Case Studies</li><li>Live Demo</li>
-            </ul>
-            <span class="link__text">Open <span>↗</span></span>
-          </div>
-          <div class="work__image-box">
-            <img class="work__image" src="project1.jpg" alt="AIstronomy">
-          </div>
-        </a>
+      <p>Selected work. Filter by tag.</p>
+    </div>
 
-        <a class="work__box" href="https://github.com/your-username/job-matching" target="_blank">
-          <div class="work__text">
-            <h3>Job Matching System (Graph-Based)</h3>
-            <ul class="work__list">
-              <li>Hungarian Algorithm</li><li>Python</li><li>Graphs</li>
-            </ul>
-            <span class="link__text">Open <span>↗</span></span>
-          </div>
-          <div class="work__image-box">
-            <img class="work__image" src="project2.jpg" alt="Job Matching">
-          </div>
-        </a>
+    <div class="filters">
+      <button class="chip is-active" data-filter="all">All</button>
+      <button class="chip" data-filter="AI">AI</button>
+      <button class="chip" data-filter="Web">Web</button>
+      <button class="chip" data-filter="AWS">AWS</button>
+    </div>
 
-        <a class="work__box" href="https://github.com/your-username/aws-rekognition" target="_blank">
-          <div class="work__text">
-            <h3>Image Recognition on AWS</h3>
-            <ul class="work__list">
-              <li>Lambda</li><li>Rekognition</li><li>S3</li>
-            </ul>
-            <span class="link__text">Open <span>↗</span></span>
-          </div>
-          <div class="work__image-box">
-            <img class="work__image" src="project3.jpg" alt="AWS Recognition">
-          </div>
-        </a>
+    <div class="grid cards" id="projectGrid">
+      <!-- Card 1 -->
+      <article class="card" data-tags="AI,Web">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="" />
+        <div class="card__body">
+          <h3>Graph-Based Job Matcher</h3>
+          <p>Hungarian algorithm to match candidates and roles optimally.</p>
+        </div>
+        <div class="card__footer">
+          <span class="badge">Next.js</span>
+          <span class="badge">FastAPI</span>
+          <span class="badge">Graph</span>
+          <a class="btn btn--sm" href="#" target="_blank" rel="noopener">Demo</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" data-tags="AI">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop" alt="" />
+        <div class="card__body">
+          <h3>AIstronomy Forecasts</h3>
+          <p>Space-weather predictions via transformers + physics-informed priors.</p>
+        </div>
+        <div class="card__footer">
+          <span class="badge">PyTorch</span>
+          <span class="badge">Timeseries</span>
+          <a class="btn btn--sm" href="#" target="_blank" rel="noopener">Demo</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" data-tags="AWS,Web">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop" alt="" />
+        <div class="card__body">
+          <h3>Home Automation (Serverless)</h3>
+          <p>Rekognition + Lambda + IoT Core for secure smart access.</p>
+        </div>
+        <div class="card__footer">
+          <span class="badge">AWS</span>
+          <span class="badge">IoT</span>
+          <a class="btn btn--sm" href="#" target="_blank" rel="noopener">Demo</a>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" data-tags="Web">
+        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop" alt="" />
+        <div class="card__body">
+          <h3>Open Resume Builder</h3>
+          <p>ATS-friendly resume builder with JSON schema & PDF export.</p>
+        </div>
+        <div class="card__footer">
+          <span class="badge">Next.js</span>
+          <span class="badge">Docker</span>
+          <a class="btn btn--sm" href="#" target="_blank" rel="noopener">Demo</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="section__head">
+      <h2>Experience</h2>
+      <p>Where I’ve learned by doing.</p>
+    </div>
+    <div class="timeline">
+      <div class="item">
+        <div class="time">May 2025 – Aug 2025</div>
+        <div class="content">
+          <h3>ML Research Intern — SpaceLab AI</h3>
+          <ul>
+            <li>Built solar-flare classifier (F1 +14%).</li>
+            <li>Served with FastAPI; p95 latency &lt; 80ms.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <div class="time">Jan 2025 – Present</div>
+        <div class="content">
+          <h3>Teaching Assistant — Marwadi University</h3>
+          <ul>
+            <li>Led ML labs for 200+ students.</li>
+            <li>Wrote auto-grader; reduced TA workload by 40%.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="row contact__info">
+  <section id="contact" class="section">
+    <div class="section__head">
       <h2>Contact</h2>
-      <p class="muted">Open to internships, collaborations, and speaking invites.</p>
-      <div class="cta">
-        <a class="btn btn--pink" href="mailto:your.email@example.com">Email Me</a>
-        <a class="btn" href="https://github.com/your-username" target="_blank">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/your-handle" target="_blank">LinkedIn</a>
-      </div>
+      <p>Let’s build something great.</p>
     </div>
+    <form class="contact" id="contactForm" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" autocomplete="name" required />
+        <small class="error" data-for="name"></small>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+        <small class="error" data-for="email"></small>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <small class="error" data-for="message"></small>
+      </div>
+      <div class="form-actions">
+        <button class="btn" type="submit">Send</button>
+        <span id="formStatus" role="status" aria-live="polite"></span>
+      </div>
+    </form>
   </section>
 
-  <!-- Footer / Back to top -->
+  <!-- Footer -->
   <footer class="footer">
-    <div class="row">
-      <ul class="footer__social-links">
-        <li><a href="#home">Back to top</a></li>
-      </ul>
-      <p>© <span id="y"></span> Devansh Patira</p>
-    </div>
-    <a href="#home" class="back-to-top" id="backTop" aria-label="Back to top">↑</a>
+    <p>© <span id="year"></span> Devansh Patira • Built with care.</p>
+    <a href="#" class="to-top" id="toTop" aria-label="Back to top">↑</a>
   </footer>
 
-  <script src="index.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
