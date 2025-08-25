@@ -203,3 +203,10 @@ body{
   border: 1px solid var(--border);
 }
 .cert-icon .icon-sm{ width:22px; height:22px; }
+
+/* WhatsApp hover color */
+.footer-social a[data-brand="whatsapp"]:hover {
+  background: #25D366; /* WhatsApp green */
+  border-color: transparent;
+  color: #fff;
+}
