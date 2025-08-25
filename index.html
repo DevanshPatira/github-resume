@@ -204,42 +204,72 @@
       </div>
     </section>
 
-    <!-- ============== Contact ============== -->
-    <section id="contact" class="section" aria-labelledby="contactTitle">
-      <div class="container grid-2">
-        <div class="panel reveal">
-          <h2 id="contactTitle" class="h2">Contact</h2>
-          <p class="muted">Let’s build something great.</p>
-          <ul class="contact-list">
-            <li>
-              <svg class="icon-sm" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M22 6 12 13 2 6"/></svg>
-              devanshpatira@gmail.com
-            </li>
-            <li>
-              <svg class="icon-sm" viewBox="0 0 24 24"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09l1 4-1.18 1.18A16 16 0 0 0 16.09 17l1.18-1.18 4 1z"/></svg>
-              +91 9375778788
-            </li>
-            <li>
-              <svg class="icon-sm" viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/></svg>
-              Rajkot, India
-            </li>
-          </ul>
-          <div class="row gap">
-            <a class="btn ghost" href="https://github.com/DevanshPatira" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn ghost" href="https://www.linkedin.com/in/devanshpatira?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </div>
-
-        <form class="panel reveal form" onsubmit="return false" aria-label="Quick message form">
-          <label class="field"><span>Name</span><input type="text" placeholder="Your name" required /></label>
-          <label class="field"><span>Email</span><input type="email" placeholder="you@email.com" required /></label>
-          <label class="field"><span>Message</span><textarea rows="6" placeholder="What would you like to build?" required></textarea></label>
-          <button class="btn primary">Send</button>
-          <p class="tiny muted">Demo form. Hook it to Formspree / EmailJS / your backend.</p>
-        </form>
+<!-- ============== Contact ============== -->
+<section id="contact" class="section" aria-labelledby="contactTitle">
+  <div class="container grid-2">
+    <!-- Left side: Info -->
+    <div class="panel reveal">
+      <h2 id="contactTitle" class="h2">Get In Touch</h2>
+      <p class="muted">
+        I’m always open to discussing new opportunities, collaborating on exciting projects, 
+        or simply having a conversation about technology and innovation. 
+        Feel free to reach out!
+      </p>
+      <ul class="contact-list">
+        <li>
+          <svg class="icon-sm" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M22 6 12 13 2 6"/></svg>
+          <a href="mailto:devanshpatira@gmail.com">devanshpatira@gmail.com</a>
+        </li>
+        <li>
+          <svg class="icon-sm" viewBox="0 0 24 24"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09l1 4-1.18 1.18A16 16 0 0 0 16.09 17l1.18-1.18 4 1z"/></svg>
+          <a href="tel:+919375778788">+91 9375778788</a>
+        </li>
+        <li>
+          <svg class="icon-sm" viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/></svg>
+          Rajkot, India
+        </li>
+      </ul>
+      <div class="row gap">
+        <a class="btn ghost" href="https://github.com/DevanshPatira" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/devanshpatira?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
-    </section>
-  </main>
+    </div>
+
+    <!-- Right side: Form -->
+    <form class="panel reveal form" onsubmit="return false" aria-label="Quick message form">
+      <label class="field">
+        <span>Name</span>
+        <div class="input-with-icon">
+          <svg class="icon-sm" viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg>
+          <input type="text" placeholder="Your name" required />
+        </div>
+      </label>
+      <label class="field">
+        <span>Email</span>
+        <div class="input-with-icon">
+          <svg class="icon-sm" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M22 6 12 13 2 6"/></svg>
+          <input type="email" placeholder="you@email.com" required />
+        </div>
+      </label>
+      <label class="field">
+        <span>Subject</span>
+        <div class="input-with-icon">
+          <svg class="icon-sm" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+          <input type="text" placeholder="What’s this about?" required />
+        </div>
+      </label>
+      <label class="field">
+        <span>Message</span>
+        <div class="input-with-icon textarea-icon">
+          <svg class="icon-sm" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/></svg>
+          <textarea rows="6" placeholder="Write your message here..." required></textarea>
+        </div>
+      </label>
+      <button class="btn primary">Send Message</button>
+      <p class="tiny muted">Demo form. Hook it to Formspree / EmailJS / your backend.</p>
+    </form>
+  </div>
+</section>
 
   <!-- ============== Footer ============== -->
   <footer class="site-footer">

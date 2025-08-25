@@ -93,20 +93,18 @@ body{
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 18px;
-  overflow: hidden;          /* ensures the image corners follow the rounded shape */
+  overflow: hidden;          /* image corners follow rounded shape */
   border: 1px solid var(--border);
   box-shadow: var(--shadow-1);
-  display: block;            /* switch from grid to block for image container */
-  background: none;          /* remove gradient background */
+  display: block;            /* image container */
+  background: none;          /* remove gradient */
 }
-
 .avatar-img {
   width: 100%;
   height: 100%;
   object-fit: cover;         /* image fills area neatly */
   display: block;
 }
-
 .initials{font-size:72px;font-weight:900;letter-spacing:.05em;color:white;opacity:.95}
 .hero-meta{display:flex;gap:10px;margin-top:12px}
 .meta-row{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04)}
@@ -155,6 +153,28 @@ body{
   background:var(--bg-soft);color:var(--text);outline:none;transition:border .2s, box-shadow .2s;
 }
 .field input:focus,.field textarea:focus{border-color:transparent;box-shadow:0 0 0 6px var(--ring)}
+
+/* >>> NEW: icons inside inputs */
+.input-with-icon { position: relative; display: flex; align-items: center; }
+.input-with-icon svg {
+  position: absolute; left: 12px; width: 18px; height: 18px; fill: var(--muted);
+}
+.input-with-icon input,
+.input-with-icon textarea { padding-left: 40px; }
+.textarea-icon svg { top: 14px; align-self: flex-start; }
+
+/* >>> NEW: Gradient button style for Send Message */
+.form .btn.primary{
+  background: linear-gradient(90deg, #0073ff, #7c5cff);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.form .btn.primary:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,115,255,.30);
+}
 
 /* ===== Footer ===== */
 .site-footer{border-top:1px solid var(--border);padding:24px 0;background:color-mix(in oklab, var(--bg) 90%, transparent)}
