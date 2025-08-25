@@ -1,255 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>Your Name — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Devansh Patira — Portfolio</title>
-  <meta name="description" content="AI/ML & Web Developer — Portfolio" />
+  <meta name="theme-color" content="#0f172a" />
   <link rel="stylesheet" href="index.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- ======== Header / Nav ======== -->
+  <header class="site-header">
+    <a href="#" class="brand">
+      <span class="brand-mark" aria-hidden="true">★</span>
+      <span class="brand-text">Your Name</span>
+    </a>
 
-  <!-- Header / Nav -->
-  <header class="header">
-    <div class="row nav">
-      <a class="brand" href="#home">Devansh</a>
-      <ul class="nav__items">
-        <li><a class="nav__link" href="#home">Home</a></li>
-        <li><a class="nav__link" href="#about">About</a></li>
-        <li><a class="nav__link" href="#skills">Skills</a></li>
-        <li><a class="nav__link" href="#projects">Projects</a></li>
-        <li><a class="nav__link" href="#contact">Contact</a></li>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" id="navToggle" title="Open menu">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <ul id="nav-menu" class="nav-menu">
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="divider" aria-hidden="true"></li>
+        <li>
+          <button id="themeToggle" class="btn ghost" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+        </li>
       </ul>
-    </div>
-
-    <!-- HERO -->
-    <div class="row header__text-box" id="home">
-      <div class="hero__wrap">
-        <div class="hero__photo">
-          <!-- Replace avatar.jpg with your file name if different -->
-          <img src="avatar.jpg" alt="Devansh Patira">
-        </div>
-
-        <h1 class="heading-primary">
-          <span>Hi, I'm <b class="u-underline">Devansh Patira</b></span>
-        </h1>
-        
-        <p class="tagline">
-          <span id="typeTarget"></span><i class="caret">|</i>
-        </p>
-
-        <p class="sub">
-          Passionate developer exploring cutting-edge technologies in <b>AI</b>, web development, and <b>data science</b>.
-        </p>
-
-        <div class="cta">
-          <a class="btn btn--pink" href="#projects">View My Work</a>
-          <a class="btn" href="#contact">Get In Touch</a>
-        </div>
-
-        <div class="hero__socials">
-          <a href="https://github.com/your-username" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="mailto:your.email@example.com">Email</a>
-        </div>
-      </div>
-      <div class="hero__bg"></div>
-    </div>
+    </nav>
   </header>
 
-<!-- About -->
-<section class="about about--v2" id="about">
-  <div class="row about__content">
-    <!-- Left: Picture -->
-    <img src="Aboutme.png" alt="Devansh Patira" class="about__photo about__photo--lg">
-
-
-    <!-- Right: Text + Stats -->
-    <div class="about__right">
-      <h2 class="about__title">
-        About <span class="accent-underline">Me</span>
-      </h2>
-
-      <p class="muted about__lead">
-        I'm currently pursuing my <b>B.Tech in Computer Engineering (AI)</b> at
-        <b>Marwadi University</b>, maintaining a strong academic record with a
-        <b>CGPA of 8.79/10</b>.
-      </p>
-
-      <div class="stats">
-        <!-- CGPA -->
-        <div class="stat stat--blue" data-count="8.79" data-decimals="2">
-          <div class="stat__value">0</div>
-          <div class="stat__sub">
-            <!-- graduation-cap icon -->
-            <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3 2 8l10 5 8-4.1V17h2V8L12 3Zm-6 8.2v4.3c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-4.3l-6 3-6-3Z" fill="currentColor"/>
-            </svg>
-            <span>CGPA / 10</span>
+  <!-- ======== Hero ======== -->
+  <main id="content">
+    <section class="hero section" id="home">
+      <div class="container grid-2">
+        <div class="stack reveal">
+          <span class="badge">Open to opportunities</span>
+          <h1 class="h1">
+            Your Name — <span class="accent">AI & Full-Stack Developer</span>
+          </h1>
+          <p class="lead">
+            I craft fast, accessible experiences powered by data and delightful micro-interactions.
+          </p>
+          <div class="row gap">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="https://github.com/yourhandle" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/yourhandle/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn outline" href="./resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           </div>
+
+          <ul class="chips">
+            <li class="chip">Deployed 10+ projects</li>
+            <li class="chip">Core Web Vitals &gt; 95</li>
+            <li class="chip">ML for real users</li>
+          </ul>
         </div>
-      
-        <!-- Projects -->
-        <div class="stat stat--green" data-count="5" data-suffix="+">
-          <div class="stat__value">0</div>
-          <div class="stat__sub">
-            <!-- book icon -->
-            <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6 4h9a3 3 0 0 1 3 3v11.5a.5.5 0 0 1-.8.4A5.8 5.8 0 0 0 14 18H6a2 2 0 0 0 0 4h9a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H6a2 2 0 0 0 0 4h8v2H6A4 4 0 1 1 6 4Z" fill="currentColor"/>
-            </svg>
-            <span>Projects</span>
+
+        <div class="hero-card reveal">
+          <div class="avatar">
+            <!-- Replace with your photo if you like -->
+            <div class="initials" aria-hidden="true">YN</div>
           </div>
-        </div>
-      
-        <!-- Years in Projects -->
-        <div class="stat stat--purple" data-count="1" data-suffix="+">
-          <div class="stat__value">0</div>
-          <div class="stat__sub">
-            <!-- users icon -->
-            <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-8 1a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-3.3 0-6 1.7-6 3.8V21h8v-2.2c0-2.1-2.7-3.8-6-3.8Zm8 0c-.7 0-1.4.1-2 .3a5.1 5.1 0 0 1 3 3.5V21h8v-2.2c0-2.1-2.7-3.8-6-3.8Z" fill="currentColor"/>
-            </svg>
-            <span>Years in Projects</span>
+          <div class="hero-meta">
+            <div class="meta-row">
+              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7zM12 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+              India
+            </div>
+            <div class="meta-row">
+              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M2 12h20M12 2v20"/></svg>
+              Remote / On-site
+            </div>
           </div>
-        </div>
-      
-        <!-- Dedication -->
-        <div class="stat stat--orange" data-count="100" data-suffix="%">
-          <div class="stat__value">0</div>
-          <div class="stat__sub">
-            <!-- activity/trend icon -->
-            <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M3 12h4l3-8 4 16 3-8h4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Dedication</span>
-          </div>
-        </div>
-      </div>      
-</section>
-
-
-  <!-- Skills -->
-  <section class="work" id="skills">
-    <div class="row">
-      <h2>Skills &amp; Expertise</h2>
-      <p class="muted">Edit the names & percentages in HTML — bars will animate automatically.</p>
-
-      <div class="skills__grid">
-        <div class="skill">
-          <div class="skill__head">
-            <h3>Programming</h3>
-          </div>
-          <div class="skill__row"><span>Python</span><span>85%</span></div>
-          <div class="skill__bar" data-percent="85"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>JavaScript</span><span>80%</span></div>
-          <div class="skill__bar" data-percent="80"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>C++</span><span>65%</span></div>
-          <div class="skill__bar" data-percent="65"><span class="skill__fill"></span></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill__head"><h3>Frameworks</h3></div>
-          <div class="skill__row"><span>React.js</span><span>80%</span></div>
-          <div class="skill__bar" data-percent="80"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>Next.js</span><span>75%</span></div>
-          <div class="skill__bar" data-percent="75"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>TensorFlow</span><span>60%</span></div>
-          <div class="skill__bar" data-percent="60"><span class="skill__fill"></span></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill__head"><h3>Cloud & DevOps</h3></div>
-          <div class="skill__row"><span>AWS</span><span>75%</span></div>
-          <div class="skill__bar" data-percent="75"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>REST APIs</span><span>85%</span></div>
-          <div class="skill__bar" data-percent="85"><span class="skill__fill"></span></div>
-
-          <div class="skill__row"><span>Network Security</span><span>60%</span></div>
-          <div class="skill__bar" data-percent="60"><span class="skill__fill"></span></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects -->
-  <section class="work" id="projects">
-    <div class="row">
-      <h2>Projects</h2>
-      <div class="work__boxes">
-        <a class="work__box" href="https://github.com/your-username/aistronomy" target="_blank">
-          <div class="work__text">
-            <h3>AIstronomy: A New Era of Space Discovery</h3>
-            <ul class="work__list">
-              <li>Slides</li><li>Case Studies</li><li>Live Demo</li>
-            </ul>
-            <span class="link__text">Open <span>↗</span></span>
-          </div>
-          <div class="work__image-box">
-            <img class="work__image" src="project1.jpg" alt="AIstronomy">
-          </div>
-        </a>
+    <!-- ======== Projects ======== -->
+    <section class="section" id="projects" aria-labelledby="projectsTitle">
+      <div class="container">
+        <h2 class="h2 reveal" id="projectsTitle">Projects</h2>
+        <p class="muted reveal">Impact-focused work shipped to real users.</p>
 
-        <a class="work__box" href="https://github.com/your-username/job-matching" target="_blank">
-          <div class="work__text">
-            <h3>Job Matching System (Graph-Based)</h3>
-            <ul class="work__list">
-              <li>Hungarian Algorithm</li><li>Python</li><li>Graphs</li>
-            </ul>
-            <span class="link__text">Open <span>↗</span></span>
-          </div>
-          <div class="work__image-box">
-            <img class="work__image" src="project2.jpg" alt="Job Matching">
-          </div>
-        </a>
+        <div class="cards">
+          <!-- Card -->
+          <article class="card reveal">
+            <div class="card-media gradient-1" aria-hidden="true"></div>
+            <div class="card-body">
+              <header class="card-head">
+                <h3 class="h3">FundFlow</h3>
+                <span class="pill">500+ monthly users</span>
+              </header>
+              <p class="muted">
+                Personal finance toolkit with rule-based budgets and ML-powered spend insights.
+              </p>
+              <ul class="tags">
+                <li>React</li><li>FastAPI</li><li>Postgres</li>
+              </ul>
+              <div class="row">
+                <a class="btn small primary" href="#" target="_blank" rel="noreferrer">Live</a>
+                <a class="btn small outline" href="#" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
 
-        <a class="work__box" href="https://github.com/your-username/aws-rekognition" target="_blank">
-          <div class="work__text">
-            <h3>Image Recognition on AWS</h3>
-            <ul class="work__list">
-              <li>Lambda</li><li>Rekognition</li><li>S3</li>
+          <article class="card reveal">
+            <div class="card-media gradient-2" aria-hidden="true"></div>
+            <div class="card-body">
+              <header class="card-head">
+                <h3 class="h3">Eco Raddi</h3>
+                <span class="pill">Pilot across 3 campuses</span>
+              </header>
+              <p class="muted">
+                Gamified recycling app; rewards via on-chain attestations.
+              </p>
+              <ul class="tags">
+                <li>Next.js</li><li>Tailwind</li><li>MongoDB</li>
+              </ul>
+              <div class="row">
+                <a class="btn small primary" href="#" target="_blank" rel="noreferrer">Live</a>
+                <a class="btn small outline" href="#" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-media gradient-3" aria-hidden="true"></div>
+            <div class="card-body">
+              <header class="card-head">
+                <h3 class="h3">RefuTrack</h3>
+                <span class="pill">Cut wait time by 18%</span>
+              </header>
+              <p class="muted">
+                Analytics for refugee resettlement programs; geospatial matching.
+              </p>
+              <ul class="tags">
+                <li>Python</li><li>Power BI</li><li>PostGIS</li>
+              </ul>
+              <div class="row">
+                <a class="btn small primary" href="#" target="_blank" rel="noreferrer">Live</a>
+                <a class="btn small outline" href="#" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== Skills ======== -->
+    <section class="section" id="skills" aria-labelledby="skillsTitle">
+      <div class="container">
+        <h2 class="h2 reveal" id="skillsTitle">Skills</h2>
+        <p class="muted reveal">Breadth where it helps, depth where it matters.</p>
+
+        <div class="grid-2">
+          <div class="panel reveal">
+            <h3 class="h4">Proficiency</h3>
+            <div class="skill">
+              <div class="skill-row"><span>TypeScript</span><span>90%</span></div>
+              <div class="bar"><span style="--w:90%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-row"><span>React / Next.js</span><span>92%</span></div>
+              <div class="bar"><span style="--w:92%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-row"><span>Node / Express</span><span>86%</span></div>
+              <div class="bar"><span style="--w:86%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-row"><span>Python</span><span>80%</span></div>
+              <div class="bar"><span style="--w:80%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-row"><span>Tailwind CSS</span><span>95%</span></div>
+              <div class="bar"><span style="--w:95%"></span></div>
+            </div>
+          </div>
+
+          <div class="panel reveal">
+            <h3 class="h4">Tech stack</h3>
+            <ul class="stack">
+              <li><strong>Frontend:</strong> React, Next.js, Vite, Tailwind</li>
+              <li><strong>Backend:</strong> Node.js, Express, FastAPI</li>
+              <li><strong>Data/ML:</strong> Pandas, scikit-learn, PyTorch, Power BI</li>
+              <li><strong>Tools:</strong> Docker, GitHub Actions, Jest</li>
             </ul>
-            <span class="link__text">Open <span>↗</span></span>
           </div>
-          <div class="work__image-box">
-            <img class="work__image" src="project3.jpg" alt="AWS Recognition">
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== Education & Achievements ======== -->
+    <section class="section" id="education" aria-labelledby="eduTitle">
+      <div class="container grid-2">
+        <div class="panel reveal">
+          <h2 class="h2" id="eduTitle">Education</h2>
+          <div class="edu-item">
+            <div class="edu-main">Marwadi University</div>
+            <div class="edu-sub">B.E. Artificial Intelligence & Data Science</div>
+            <div class="edu-meta">CGPA 8.8 • 2026</div>
           </div>
-        </a>
+        </div>
+        <div class="panel reveal">
+          <h2 class="h2">Achievements</h2>
+          <ul class="awards">
+            <li><span class="pill soft">Winner</span> Smart India Hackathon – Finalist</li>
+            <li><span class="pill soft">Lead</span> Google Developer Student Clubs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== Contact ======== -->
+    <section class="section" id="contact" aria-labelledby="contactTitle">
+      <div class="container grid-2">
+        <div class="panel reveal">
+          <h2 class="h2" id="contactTitle">Contact</h2>
+          <p class="muted">Let’s build something great.</p>
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M4 4h16v16H4z"/><path d="M22 6 12 13 2 6"/></svg>
+              you@example.com
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a1 1 0 0 1 1 .75l1 4a1 1 0 0 1-.29 1L9.91 10a16 16 0 0 0 6.18 6.18l1.22-1.89a1 1 0 0 1 1-.29l4 1a1 1 0 0 1 .69 1.02z"/></svg>
+              +91 00000 00000
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/></svg>
+              Rajkot, India
+            </li>
+          </ul>
+          <div class="row gap">
+            <a class="btn ghost" href="https://github.com/yourhandle" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/yourhandle/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+
+        <form class="panel reveal form" onsubmit="return false" aria-label="Quick message form">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" placeholder="Your name" required />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" placeholder="your@email.com" required />
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea rows="6" placeholder="What would you like to build?" required></textarea>
+          </label>
+          <button class="btn primary">Send</button>
+          <p class="tiny muted">Demo form. Hook it to Formspree / EmailJS / your backend.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======== Footer ======== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. Built with vanilla HTML/CSS/JS.</p>
+      <div class="footer-links">
+        <a href="#">Imprint</a><span>•</span><a href="#">Privacy</a>
       </div>
     </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="row contact__info">
-      <h2>Contact</h2>
-      <p class="muted">Open to internships, collaborations, and speaking invites.</p>
-      <div class="cta">
-        <a class="btn btn--pink" href="mailto:your.email@example.com">Email Me</a>
-        <a class="btn" href="https://github.com/your-username" target="_blank">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/your-handle" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer / Back to top -->
-  <footer class="footer">
-    <div class="row">
-      <ul class="footer__social-links">
-        <li><a href="#home">Back to top</a></li>
-      </ul>
-      <p>© <span id="y"></span> Devansh Patira</p>
-    </div>
-    <a href="#home" class="back-to-top" id="backTop" aria-label="Back to top">↑</a>
   </footer>
 
-  <script src="index.js"></script>
+  <script src="index.js" defer></script>
 </body>
 </html>
