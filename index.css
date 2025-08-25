@@ -23,7 +23,8 @@ img { max-width: 100%; display: block; }
   position: sticky; top: 0; z-index: 50;
   background: rgba(0,0,0,.25);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
+  /* removed line: border-bottom to avoid separators */
+  border-bottom: none;
 }
 .row { max-width: 1100px; margin: 0 auto; padding: 14px 20px; }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
@@ -32,11 +33,11 @@ img { max-width: 100%; display: block; }
 .nav__link { color: #e8eefc; text-decoration: none; font-weight: 600; opacity: .9; }
 .nav__link:hover { opacity: 1; }
 
-/* ========== HERO (now a normal section for single-page flow) ========== */
+/* ========== HERO (normal section for single-page flow) ========== */
 .header__text-box {
   position: relative;
   isolation: isolate;
-  padding: 100px 20px 80px;   /* <- replaced min-height with padding */
+  padding: 100px 20px 80px;   /* replaced min-height with padding */
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -48,13 +49,7 @@ img { max-width: 100%; display: block; }
   background: url("hero-wallpaper.jpg") center/cover no-repeat;
   opacity: .22; filter: saturate(110%) contrast(105%);
 }
-/* soft fade into dark page background */
-.header__text-box::after {
-  content: "";
-  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
-  background: linear-gradient(to bottom, rgba(13,71,161,0.8), var(--dark));
-  z-index: -1;
-}
+/* removed hero ::after gradient to avoid a visible seam */
 
 /* hero content */
 .hero__wrap { text-align: center; max-width: 900px; padding: 24px; }
@@ -111,7 +106,7 @@ img { max-width: 100%; display: block; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ========== GLOBAL SECTION STYLES (one-page continuity) ========== */
+/* ========== GLOBAL SECTION STYLES (continuous background) ========== */
 .about, .work, .contact, .footer { background: var(--dark); }
 .about .muted, .work .muted, .contact .muted { color: #aebbd6; }
 
@@ -132,13 +127,23 @@ img { max-width: 100%; display: block; }
 
 /* ========== PROJECTS ========== */
 .work__boxes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 16px; margin-top: 14px; }
-.work__box { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; padding: 14px; border: 1px solid var(--border); border-radius: 16px; text-decoration: none; color: inherit; background: rgba(255,255,255,.03); }
+.work__box {
+  display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; padding: 14px;
+  /* This border is inside the section, not a page separator. Keep or remove as you like: */
+  border: 1px solid var(--border);
+  border-radius: 16px; text-decoration: none; color: inherit;
+  background: rgba(255,255,255,.03);
+}
 .work__box:hover { background: rgba(255,255,255,.06); }
 .work__image { border-radius: 12px; height: 100%; object-fit: cover; }
 
 /* ========== CONTACT + FOOTER ========== */
 .contact .cta { margin-top: 14px; }
-.footer { border-top: 1px solid var(--border); position: relative; }
+.footer {
+  /* removed border-top to avoid bottom separator */
+  border-top: none;
+  position: relative;
+}
 .footer .back-to-top {
   position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
   text-decoration: none; color: #e8eefc; border: 1px solid var(--border);
