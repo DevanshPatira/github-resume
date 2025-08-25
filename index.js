@@ -42,18 +42,18 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /* ===== Animate skill bars on first view ===== */
   const bars = $$(".skill__bar");
-  const io = new IntersectionObserver((entries) => {
+  const ioBars = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         const bar = e.target;
         const pct = +bar.dataset.percent || 0;
         const fill = $(".skill__fill", bar);
         fill.style.inset = `0 ${(100 - pct)}% 0 0`;
-        io.unobserve(bar);
+        ioBars.unobserve(bar);
       }
     });
   }, { threshold: 0.4 });
-  bars.forEach(b => io.observe(b));
+  bars.forEach(b => ioBars.observe(b));
 
   /* ===== Year + Back to top ===== */
   const y = $("#y"); if (y) y.textContent = new Date().getFullYear();
@@ -62,3 +62,40 @@ window.addEventListener("DOMContentLoaded", () => {
     e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+/* ===== Stats Counter (About v2) ===== */
+(function(){
+  const cards = document.querySelectorAll(".stat");
+  if (!cards.length) return;
+
+  const animate = (el) => {
+    const end = parseFloat(el.dataset.count || "0");
+    const decimals = parseInt(el.dataset.decimals || "0", 10);
+    const suffix = el.dataset.suffix || "";
+    const valEl = el.querySelector(".stat__value");
+    let cur = 0;
+    const steps = 40;                        // smoothness
+    const inc = end / steps;
+
+    const tick = () => {
+      cur = Math.min(end, cur + inc);
+      valEl.textContent = cur.toFixed(decimals) + suffix;
+      if (cur < end) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const seen = new WeakSet();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !seen.has(e.target)) {
+        animate(e.target);
+        seen.add(e.target);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  cards.forEach(c => io.observe(c));
+})();
+

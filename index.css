@@ -156,3 +156,67 @@ img { max-width: 100%; display: block; }
 .footer { border-top: 1px solid var(--border); position: relative; }
 .footer .back-to-top { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); text-decoration: none; color: #e8eefc; border: 1px solid var(--border); padding: 8px 10px; border-radius: 10px; }
 .footer .back-to-top:hover { background: rgba(255,255,255,.06); }
+
+/* ---------- About v2 ---------- */
+.about--v2 { background: #0b1220; }
+.about__title { font-size: clamp(26px, 4vw, 36px); margin-bottom: 10px; }
+.accent-underline { position: relative; }
+.accent-underline::after{
+  content:""; position:absolute; left:0; right:0; bottom:-6px; height:6px;
+  background: linear-gradient(90deg,#54a0ff,#22d3ee);
+  border-radius: 999px;
+}
+
+.about__lead { margin: 8px 0 16px; color: #cbd5e1; }
+.about__photo--lg {
+  width: 100%; max-width: 520px; height: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
+}
+.about__right { display: flex; flex-direction: column; justify-content: center; }
+
+.stats {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  margin: 10px 0 16px;
+}
+.stat {
+  background: #eaf1ff;
+  color: #0f172a;
+  border: 1px solid rgba(2,6,23,.08);
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(2,6,23,.08);
+}
+.stat--green  { background: #e9f9ef; }
+.stat--purple { background: #f4edff; }
+.stat--orange { background: #fff2e6; }
+.stat--blue   { background: #eef4ff; } /* for CGPA if you use stat--blue */
+
+.stat__value { font-size: 28px; font-weight: 800; line-height: 1; margin-bottom: 6px; }
+.stat__label { margin-top: 6px; color: #475569; font-weight: 600; }
+
+/* icon + label under number */
+.stat__sub {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: #64748b; font-weight: 600;
+}
+.stat__icon { width: 18px; height: 18px; opacity: .9 }
+
+/* number color accents (matches your reference) */
+.stat--blue   .stat__value { color: #2563eb; }  /* CGPA */
+.stat--green  .stat__value { color: #16a34a; }  /* Projects */
+.stat--purple .stat__value { color: #7c3aed; }  /* Years */
+.stat--orange .stat__value { color: #ea580c; }  /* Dedication */
+
+.about__resume { align-self: flex-start; }
+
+@media (max-width: 980px) {
+  .about__content { grid-template-columns: 1fr; }
+  .about__resume { align-self: center; }
+  .stats { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .stats { grid-template-columns: 1fr; }
+}
