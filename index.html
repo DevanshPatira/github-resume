@@ -4,44 +4,43 @@
   <meta charset="utf-8" />
   <title>Your Name — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="AI & Full-Stack developer portfolio: projects, skills, and contact." />
+  <meta name="theme-color" content="#0f1226" />
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Your Name — Portfolio" />
+  <meta property="og:description" content="AI & Full-Stack developer portfolio: projects, skills, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-username.github.io" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop stop-color='%237c5cff'/%3E%3Cstop offset='1' stop-color='%234ad1ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect rx='18' width='100' height='100' fill='url(%23g)'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-size='56' font-family='Arial Black' fill='white'%3EYN%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <!-- ======== Header / Nav ======== -->
-  <header class="site-header">
-    <a href="#" class="brand">
-      <span class="brand-mark" aria-hidden="true">★</span>
+  <!-- ============== Header / Nav ============== -->
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Home">
+      <span class="logo" aria-hidden="true"></span>
       <span class="brand-text">Your Name</span>
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" id="navToggle" title="Open menu">
-        <span class="bar" aria-hidden="true"></span>
-        <span class="bar" aria-hidden="true"></span>
-        <span class="bar" aria-hidden="true"></span>
-        <span class="sr-only">Menu</span>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <span class="sr-only">Toggle menu</span>
       </button>
-
-      <ul id="nav-menu" class="nav-menu">
+      <ul id="menu" class="menu">
         <li><a class="nav-link" href="#projects">Projects</a></li>
         <li><a class="nav-link" href="#skills">Skills</a></li>
-        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
         <li><a class="nav-link" href="#contact">Contact</a></li>
         <li class="divider" aria-hidden="true"></li>
-        <li>
-          <button id="themeToggle" class="btn ghost" aria-label="Toggle dark mode" title="Toggle theme">
-            <svg viewBox="0 0 24 24" class="icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <span class="sr-only">Toggle theme</span>
-          </button>
-        </li>
+        <li><button id="themeToggle" class="btn ghost">Theme</button></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ======== Hero ======== -->
+  <!-- ============== Hero ============== -->
   <main id="content">
-    <section class="hero section" id="home">
+    <section class="hero section">
       <div class="container grid-2">
         <div class="stack reveal">
           <span class="badge">Open to opportunities</span>
@@ -49,34 +48,33 @@
             Your Name — <span class="accent">AI & Full-Stack Developer</span>
           </h1>
           <p class="lead">
-            I craft fast, accessible experiences powered by data and delightful micro-interactions.
+            I build fast, accessible products with polished UI and real-world impact.
           </p>
           <div class="row gap">
             <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn ghost" href="https://github.com/yourhandle" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn ghost" href="https://www.linkedin.com/in/yourhandle/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn outline" href="./resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+            <a class="btn outline" href="https://github.com/yourhandle" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn outline" href="https://www.linkedin.com/in/yourhandle/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn ghost" href="./resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           </div>
-
           <ul class="chips">
-            <li class="chip">Deployed 10+ projects</li>
             <li class="chip">Core Web Vitals &gt; 95</li>
-            <li class="chip">ML for real users</li>
+            <li class="chip">Deployed 10+ projects</li>
+            <li class="chip">ML + Data Viz</li>
           </ul>
         </div>
 
         <div class="hero-card reveal">
           <div class="avatar">
-            <!-- Replace with your photo if you like -->
+            <!-- Replace with your photo: <img src="me.jpg" alt="Your Name" /> -->
             <div class="initials" aria-hidden="true">YN</div>
           </div>
           <div class="hero-meta">
             <div class="meta-row">
-              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7zM12 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
-              India
+              <svg class="icon-sm" viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7zM12 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+              Rajkot, India
             </div>
             <div class="meta-row">
-              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M2 12h20M12 2v20"/></svg>
+              <svg class="icon-sm" viewBox="0 0 24 24"><path d="M2 12h20M12 2v20"/></svg>
               Remote / On-site
             </div>
           </div>
@@ -84,14 +82,13 @@
       </div>
     </section>
 
-    <!-- ======== Projects ======== -->
-    <section class="section" id="projects" aria-labelledby="projectsTitle">
+    <!-- ============== Projects ============== -->
+    <section id="projects" class="section" aria-labelledby="projectsTitle">
       <div class="container">
-        <h2 class="h2 reveal" id="projectsTitle">Projects</h2>
+        <h2 id="projectsTitle" class="h2 reveal">Projects</h2>
         <p class="muted reveal">Impact-focused work shipped to real users.</p>
 
         <div class="cards">
-          <!-- Card -->
           <article class="card reveal">
             <div class="card-media gradient-1" aria-hidden="true"></div>
             <div class="card-body">
@@ -99,12 +96,8 @@
                 <h3 class="h3">FundFlow</h3>
                 <span class="pill">500+ monthly users</span>
               </header>
-              <p class="muted">
-                Personal finance toolkit with rule-based budgets and ML-powered spend insights.
-              </p>
-              <ul class="tags">
-                <li>React</li><li>FastAPI</li><li>Postgres</li>
-              </ul>
+              <p class="muted">Personal finance toolkit with rule-based budgets and ML insights.</p>
+              <ul class="tags"><li>React</li><li>FastAPI</li><li>Postgres</li></ul>
               <div class="row">
                 <a class="btn small primary" href="#" target="_blank" rel="noreferrer">Live</a>
                 <a class="btn small outline" href="#" target="_blank" rel="noreferrer">Code</a>
@@ -119,12 +112,8 @@
                 <h3 class="h3">Eco Raddi</h3>
                 <span class="pill">Pilot across 3 campuses</span>
               </header>
-              <p class="muted">
-                Gamified recycling app; rewards via on-chain attestations.
-              </p>
-              <ul class="tags">
-                <li>Next.js</li><li>Tailwind</li><li>MongoDB</li>
-              </ul>
+              <p class="muted">Gamified recycling; rewards via on-chain attestations.</p>
+              <ul class="tags"><li>Next.js</li><li>MongoDB</li><li>Tailwind</li></ul>
               <div class="row">
                 <a class="btn small primary" href="#" target="_blank" rel="noreferrer">Live</a>
                 <a class="btn small outline" href="#" target="_blank" rel="noreferrer">Code</a>
@@ -139,12 +128,8 @@
                 <h3 class="h3">RefuTrack</h3>
                 <span class="pill">Cut wait time by 18%</span>
               </header>
-              <p class="muted">
-                Analytics for refugee resettlement programs; geospatial matching.
-              </p>
-              <ul class="tags">
-                <li>Python</li><li>Power BI</li><li>PostGIS</li>
-              </ul>
+              <p class="muted">Analytics for refugee resettlement; geospatial matching.</p>
+              <ul class="tags"><li>Python</li><li>Power BI</li><li>PostGIS</li></ul>
               <div class="row">
                 <a class="btn small primary" href="#" target="_blank" rel="noreferrer">Live</a>
                 <a class="btn small outline" href="#" target="_blank" rel="noreferrer">Code</a>
@@ -155,10 +140,10 @@
       </div>
     </section>
 
-    <!-- ======== Skills ======== -->
-    <section class="section" id="skills" aria-labelledby="skillsTitle">
+    <!-- ============== Skills ============== -->
+    <section id="skills" class="section" aria-labelledby="skillsTitle">
       <div class="container">
-        <h2 class="h2 reveal" id="skillsTitle">Skills</h2>
+        <h2 id="skillsTitle" class="h2 reveal">Skills</h2>
         <p class="muted reveal">Breadth where it helps, depth where it matters.</p>
 
         <div class="grid-2">
@@ -180,10 +165,6 @@
               <div class="skill-row"><span>Python</span><span>80%</span></div>
               <div class="bar"><span style="--w:80%"></span></div>
             </div>
-            <div class="skill">
-              <div class="skill-row"><span>Tailwind CSS</span><span>95%</span></div>
-              <div class="bar"><span style="--w:95%"></span></div>
-            </div>
           </div>
 
           <div class="panel reveal">
@@ -199,11 +180,14 @@
       </div>
     </section>
 
-    <!-- ======== Education & Achievements ======== -->
-    <section class="section" id="education" aria-labelledby="eduTitle">
+    <!-- ============== About / Education ============== -->
+    <section id="about" class="section">
       <div class="container grid-2">
         <div class="panel reveal">
-          <h2 class="h2" id="eduTitle">Education</h2>
+          <h2 class="h2">About</h2>
+          <p class="muted">
+            Brief intro about you. What you build, what excites you, and what you’re looking for.
+          </p>
           <div class="edu-item">
             <div class="edu-main">Marwadi University</div>
             <div class="edu-sub">B.E. Artificial Intelligence & Data Science</div>
@@ -211,32 +195,32 @@
           </div>
         </div>
         <div class="panel reveal">
-          <h2 class="h2">Achievements</h2>
+          <h2 class="h2">Highlights</h2>
           <ul class="awards">
-            <li><span class="pill soft">Winner</span> Smart India Hackathon – Finalist</li>
-            <li><span class="pill soft">Lead</span> Google Developer Student Clubs</li>
+            <li><span class="pill soft">Finalist</span> Smart India Hackathon</li>
+            <li><span class="pill soft">Lead</span> Google DSC</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ======== Contact ======== -->
-    <section class="section" id="contact" aria-labelledby="contactTitle">
+    <!-- ============== Contact ============== -->
+    <section id="contact" class="section" aria-labelledby="contactTitle">
       <div class="container grid-2">
         <div class="panel reveal">
-          <h2 class="h2" id="contactTitle">Contact</h2>
+          <h2 id="contactTitle" class="h2">Contact</h2>
           <p class="muted">Let’s build something great.</p>
           <ul class="contact-list">
             <li>
-              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M4 4h16v16H4z"/><path d="M22 6 12 13 2 6"/></svg>
+              <svg class="icon-sm" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M22 6 12 13 2 6"/></svg>
               you@example.com
             </li>
             <li>
-              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a1 1 0 0 1 1 .75l1 4a1 1 0 0 1-.29 1L9.91 10a16 16 0 0 0 6.18 6.18l1.22-1.89a1 1 0 0 1 1-.29l4 1a1 1 0 0 1 .69 1.02z"/></svg>
+              <svg class="icon-sm" viewBox="0 0 24 24"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09l1 4-1.18 1.18A16 16 0 0 0 16.09 17l1.18-1.18 4 1z"/></svg>
               +91 00000 00000
             </li>
             <li>
-              <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/></svg>
+              <svg class="icon-sm" viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/></svg>
               Rajkot, India
             </li>
           </ul>
@@ -247,18 +231,9 @@
         </div>
 
         <form class="panel reveal form" onsubmit="return false" aria-label="Quick message form">
-          <label class="field">
-            <span>Name</span>
-            <input type="text" placeholder="Your name" required />
-          </label>
-          <label class="field">
-            <span>Email</span>
-            <input type="email" placeholder="your@email.com" required />
-          </label>
-          <label class="field">
-            <span>Message</span>
-            <textarea rows="6" placeholder="What would you like to build?" required></textarea>
-          </label>
+          <label class="field"><span>Name</span><input type="text" placeholder="Your name" required /></label>
+          <label class="field"><span>Email</span><input type="email" placeholder="you@email.com" required /></label>
+          <label class="field"><span>Message</span><textarea rows="6" placeholder="What would you like to build?" required></textarea></label>
           <button class="btn primary">Send</button>
           <p class="tiny muted">Demo form. Hook it to Formspree / EmailJS / your backend.</p>
         </form>
@@ -266,13 +241,11 @@
     </section>
   </main>
 
-  <!-- ======== Footer ======== -->
+  <!-- ============== Footer ============== -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Your Name. Built with vanilla HTML/CSS/JS.</p>
-      <div class="footer-links">
-        <a href="#">Imprint</a><span>•</span><a href="#">Privacy</a>
-      </div>
+      <div class="footer-links"><a href="#">Imprint</a><span>•</span><a href="#">Privacy</a></div>
     </div>
   </footer>
 
