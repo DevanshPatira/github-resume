@@ -7,13 +7,13 @@
   --muted: #d7e3fc;
   --border: rgba(255,255,255,.12);
   --pink: #ff4d8d;
-  --dark: #1f2937;
+  --dark: #0b1220;
 }
 html, body { height: 100%; }
 body {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
-  background: #0b1220;  /* fallback for below sections */
+  background: var(--dark);
   line-height: 1.55;
 }
 img { max-width: 100%; display: block; }
@@ -32,69 +32,55 @@ img { max-width: 100%; display: block; }
 .nav__link { color: #e8eefc; text-decoration: none; font-weight: 600; opacity: .9; }
 .nav__link:hover { opacity: 1; }
 
-/* ========== HERO ========== */
+/* ========== HERO (now a normal section for single-page flow) ========== */
 .header__text-box {
   position: relative;
-  isolation: isolate;      /* make overlay behind content */
-  min-height: clamp(560px, 80vh, 820px);
+  isolation: isolate;
+  padding: 100px 20px 80px;   /* <- replaced min-height with padding */
   display: grid;
   place-items: center;
   overflow: hidden;
-  padding-top: 36px;       /* clear sticky header */
   background: linear-gradient(135deg, var(--bg-blue-1), var(--bg-blue-2));
 }
-
-/* translucent wallpaper behind (put your image as hero-wallpaper.jpg) */
+/* translucent wallpaper */
 .hero__bg {
   position: absolute; inset: 0; z-index: -1;
   background: url("hero-wallpaper.jpg") center/cover no-repeat;
-  opacity: .22;            /* transparent feel */
-  filter: saturate(110%) contrast(105%);
+  opacity: .22; filter: saturate(110%) contrast(105%);
+}
+/* soft fade into dark page background */
+.header__text-box::after {
+  content: "";
+  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: linear-gradient(to bottom, rgba(13,71,161,0.8), var(--dark));
+  z-index: -1;
 }
 
-/* content shell */
-.hero__wrap {
-  text-align: center;
-  max-width: 900px;
-  padding: 24px;
-}
-
-/* avatar */
+/* hero content */
+.hero__wrap { text-align: center; max-width: 900px; padding: 24px; }
 .hero__photo img {
   width: 120px; height: 120px; object-fit: cover;
   border-radius: 999px; border: 3px solid #fff;
   margin: 0 auto 18px auto;
   box-shadow: 0 12px 30px rgba(0,0,0,.25);
 }
-
-/* headline */
 .heading-primary {
   font-size: clamp(28px, 6vw, 56px);
-  font-weight: 800;
-  letter-spacing: .2px;
-  margin-bottom: 10px;
+  font-weight: 800; letter-spacing: .2px; margin-bottom: 10px;
   opacity: 0; transform: translateY(12px);
 }
-
-/* underline style for your name */
 .u-underline {
   text-decoration: underline;
   text-decoration-color: #8ee7ff;
   text-decoration-thickness: 6px;
   text-underline-offset: 10px;
 }
-
-/* tagline (with optional typewriter target) */
 .tagline {
-  min-height: 28px;
-  font-size: clamp(16px, 2.2vw, 20px);
-  color: var(--muted);
-  margin: 4px 0 8px;
+  min-height: 28px; font-size: clamp(16px, 2.2vw, 20px);
+  color: var(--muted); margin: 4px 0 8px;
   opacity: 0; transform: translateY(12px);
 }
 .caret { opacity: .7; }
-
-/* sub text */
 .sub { color: #eaf2ff; opacity: .9; margin-top: 6px; }
 
 /* CTA buttons */
@@ -116,7 +102,6 @@ img { max-width: 100%; display: block; }
 .hero__socials a:hover { opacity: 1; }
 
 /* ========== ONE-TIME ENTRANCE ANIMATIONS ========== */
-/* We only add .hero-enter once from JS on first page load */
 .hero-enter .heading-primary { animation: fadeUp .9s ease forwards .05s; }
 .hero-enter .tagline         { animation: fadeUp .9s ease forwards .18s; }
 .hero-enter .sub             { animation: fadeUp .9s ease forwards .30s; }
@@ -126,8 +111,8 @@ img { max-width: 100%; display: block; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ========== GENERIC SECTIONS (about/skills/projects/contact) ========== */
-.about, .work, .contact, .footer { background: #0b1220; }
+/* ========== GLOBAL SECTION STYLES (one-page continuity) ========== */
+.about, .work, .contact, .footer { background: var(--dark); }
 .about .muted, .work .muted, .contact .muted { color: #aebbd6; }
 
 .about__content, .work .row, .contact__info, .footer .row {
@@ -137,7 +122,7 @@ img { max-width: 100%; display: block; }
 .about__photo { width: 220px; height: 220px; object-fit: cover; border-radius: 18px; border: 1px solid var(--border); justify-self: center; }
 @media (max-width: 900px) { .about__content { grid-template-columns: 1fr; } }
 
-/* skills bars */
+/* ========== SKILLS ========== */
 .skills__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px; margin-top: 12px; }
 .skill { border: 1px solid var(--border); border-radius: 14px; padding: 14px; background: rgba(255,255,255,.03); }
 .skill__head h3 { margin-bottom: 8px; }
@@ -145,20 +130,24 @@ img { max-width: 100%; display: block; }
 .skill__bar { position: relative; height: 10px; border-radius: 999px; background: rgba(255,255,255,.08); overflow: hidden; }
 .skill__fill { position: absolute; inset: 0 100% 0 0; background: linear-gradient(90deg,#8b5cf6,#22d3ee); border-radius: 999px; }
 
-/* projects grid */
+/* ========== PROJECTS ========== */
 .work__boxes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 16px; margin-top: 14px; }
 .work__box { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; padding: 14px; border: 1px solid var(--border); border-radius: 16px; text-decoration: none; color: inherit; background: rgba(255,255,255,.03); }
 .work__box:hover { background: rgba(255,255,255,.06); }
 .work__image { border-radius: 12px; height: 100%; object-fit: cover; }
 
-/* contact + footer */
+/* ========== CONTACT + FOOTER ========== */
 .contact .cta { margin-top: 14px; }
 .footer { border-top: 1px solid var(--border); position: relative; }
-.footer .back-to-top { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); text-decoration: none; color: #e8eefc; border: 1px solid var(--border); padding: 8px 10px; border-radius: 10px; }
+.footer .back-to-top {
+  position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
+  text-decoration: none; color: #e8eefc; border: 1px solid var(--border);
+  padding: 8px 10px; border-radius: 10px;
+}
 .footer .back-to-top:hover { background: rgba(255,255,255,.06); }
 
 /* ---------- About v2 ---------- */
-.about--v2 { background: #0b1220; }
+.about--v2 { background: var(--dark); }
 .about__title { font-size: clamp(26px, 4vw, 36px); margin-bottom: 10px; }
 .accent-underline { position: relative; }
 .accent-underline::after{
@@ -166,33 +155,30 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(90deg,#54a0ff,#22d3ee);
   border-radius: 999px;
 }
-
 .about__lead { margin: 8px 0 16px; color: #cbd5e1; }
 .about__photo--lg {
   width: 100%; max-width: 520px; height: auto;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px; border: 1px solid rgba(255,255,255,.12);
   box-shadow: 0 12px 30px rgba(0,0,0,.25);
 }
 .about__right { display: flex; flex-direction: column; justify-content: center; }
 
+/* stat grid */
 .stats {
   display: grid; gap: 14px;
   grid-template-columns: repeat(2, minmax(180px, 1fr));
   margin: 10px 0 16px;
 }
 .stat {
-  background: #eaf1ff;
-  color: #0f172a;
+  background: #eaf1ff; color: #0f172a;
   border: 1px solid rgba(2,6,23,.08);
-  padding: 16px;
-  border-radius: 16px;
+  padding: 16px; border-radius: 16px;
   box-shadow: 0 10px 24px rgba(2,6,23,.08);
 }
 .stat--green  { background: #e9f9ef; }
 .stat--purple { background: #f4edff; }
 .stat--orange { background: #fff2e6; }
-.stat--blue   { background: #eef4ff; } /* for CGPA if you use stat--blue */
+.stat--blue   { background: #eef4ff; } /* CGPA card */
 
 .stat__value { font-size: 28px; font-weight: 800; line-height: 1; margin-bottom: 6px; }
 .stat__label { margin-top: 6px; color: #475569; font-weight: 600; }
@@ -204,7 +190,7 @@ img { max-width: 100%; display: block; }
 }
 .stat__icon { width: 18px; height: 18px; opacity: .9 }
 
-/* number color accents (matches your reference) */
+/* number color accents */
 .stat--blue   .stat__value { color: #2563eb; }  /* CGPA */
 .stat--green  .stat__value { color: #16a34a; }  /* Projects */
 .stat--purple .stat__value { color: #7c3aed; }  /* Years */
