@@ -1,179 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devansh Patira — Portfolio</title>
   <meta name="description" content="AI/ML & Web Developer — Portfolio" />
-  <link rel="stylesheet" href="index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header / Nav -->
+  <!-- Nav -->
   <header class="header">
     <div class="row nav">
       <a class="brand" href="#home">Devansh</a>
-      <ul class="nav__items">
-        <li><a class="nav__link" href="#home">Home</a></li>
-        <li><a class="nav__link" href="#about">About</a></li>
-        <li><a class="nav__link" href="#skills">Skills</a></li>
-        <li><a class="nav__link" href="#projects">Projects</a></li>
-        <li><a class="nav__link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- HERO -->
-    <div class="row header__text-box" id="home">
-      <div class="hero__wrap">
-        <div class="hero__photo">
-          <!-- Replace avatar.jpg with your file name if different -->
-          <img src="avatar.jpg" alt="Devansh Patira">
-        </div>
-
-        <h1 class="heading-primary">
-          <span>Hi, I'm <b class="u-underline">Devansh Patira</b></span>
-        </h1>
-        
-        <p class="tagline">
-          <span id="typeTarget"></span><i class="caret">|</i>
-        </p>
-
-        <p class="sub">
-          Passionate developer exploring cutting-edge technologies in <b>AI</b>, web development, and <b>data science</b>.
-        </p>
-
-        <div class="cta">
-          <a class="btn btn--pink" href="#projects">View My Work</a>
-          <a class="btn" href="#contact">Get In Touch</a>
-        </div>
-
-        <div class="hero__socials">
-          <a href="https://github.com/your-username" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="mailto:your.email@example.com">Email</a>
-        </div>
-      </div>
-      <div class="hero__bg"></div>
+      <nav>
+        <ul class="nav__items">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-<!-- About -->
-<section class="about about--v2" id="about">
-  <div class="row about__content">
-    <!-- Left: Picture -->
-    <img src="Aboutme.png" alt="Devansh Patira" class="about__photo about__photo--lg">
+  <!-- Hero -->
+  <section class="header__text-box" id="home">
+    <div class="hero__wrap">
+      <div class="hero__photo">
+        <img src="avatar.jpg" alt="Devansh Patira">
+      </div>
 
+      <h1 class="heading-primary fade">
+        Hi, I’m <span class="u-underline">Devansh Patira</span>
+      </h1>
 
-    <!-- Right: Text + Stats -->
-    <div class="about__right">
-      <h2 class="about__title">
-        About <span class="accent-underline">Me</span>
-      </h2>
-
-      <p class="muted about__lead">
-        I'm currently pursuing my <b>B.Tech in Computer Engineering (AI)</b> at
-        <b>Marwadi University</b>, maintaining a strong academic record with a
-        <b>CGPA of 8.79/10</b>.
+      <p class="tagline fade">
+        B.E. Artificial Intelligence &amp; Data Science Student
       </p>
 
-      <div class="stats">
-        <!-- CGPA -->
-        <div class="stat stat--blue" data-count="8.79" data-decimals="2">
-          <div class="stat__value">0</div>
-          <div class="stat__sub">
-            <!-- graduation-cap icon -->
-            <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3 2 8l10 5 8-4.1V17h2V8L12 3Zm-6 8.2v4.3c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-4.3l-6 3-6-3Z" fill="currentColor"/>
-            </svg>
-            <span>CGPA / 10</span>
-          </div>
-        </div>
-      
-        <!-- Projects -->
-        <div class="stat stat--green" data-count="5" data-suffix="+">
-          <div class="stat__value">0</div>
-          <div class="stat__sub">
-            <!-- book icon -->
-            <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6 4h9a3 3 0 0 1 3 3v11.5a.5.5 0 0 1-.8.4A5.8 5.8 0 0 0 14 18H6a2 2 0 0 0 0 4h9a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H6a2 2 0 0 0 0 4h8v2H6A4 4 0 1 1 6 4Z" fill="currentColor"/>
-            </svg>
-            <span>Projects</span>
-          </div>
-        </div>
-      
-        <!-- Years in Projects -->
-        <div class="stat stat--purple" data-count="1" data-suffix="+">
-          <div class="stat__value">0</div>
-          <div class="stat__sub">
-            <!-- users icon -->
-            <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-8 1a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-3.3 0-6 1.7-6 3.8V21h8v-2.2c0-2.1-2.7-3.8-6-3.8Zm8 0c-.7 0-1.4.1-2 .3a5.1 5.1 0 0 1 3 3.5V21h8v-2.2c0-2.1-2.7-3.8-6-3.8Z" fill="currentColor"/>
-            </svg>
-            <span>Years in Projects</span>
-          </div>
-        </div>
-      
-        <!-- Dedication -->
-        <div class="stat stat--orange" data-count="100" data-suffix="%">
-          <div class="stat__value">0</div>
-          <div class="stat__sub">
-            <!-- activity/trend icon -->
-            <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M3 12h4l3-8 4 16 3-8h4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Dedication</span>
-          </div>
-        </div>
-      </div>      
-</section>
+      <p class="sub fade">
+        Passionate developer exploring cutting-edge technologies in <b>AI</b>, web development, and <b>data science</b>.
+      </p>
 
+      <div class="cta fade">
+        <a class="btn btn--pink" href="#projects">View My Work</a>
+        <a class="btn" href="#contact">Get In Touch</a>
+      </div>
+
+      <ul class="hero__socials fade">
+        <li><a href="https://github.com/your-username" target="_blank" rel="noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">LinkedIn</a></li>
+        <li><a href="mailto:your.email@example.com">Email</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about about--v2" id="about">
+    <div class="row about__content">
+      <img src="Aboutme.png" alt="About Devansh" class="about__photo about__photo--lg">
+
+      <div class="about__right">
+        <h2 class="about__title">About <span class="accent-underline">Me</span></h2>
+
+        <p class="about__lead">
+          I’m currently pursuing my <b>B.Tech in Computer Engineering (AI)</b> at
+          <b>Marwadi University</b>, maintaining a strong academic record with a
+          <b>CGPA of 8.79/10</b>.
+        </p>
+
+        <div class="stats">
+          <div class="stat stat--blue">
+            <div class="stat__value">8.79</div>
+            <div class="stat__sub">
+              <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3 2 8l10 5 8-4.1V17h2V8L12 3Zm-6 8.2v4.3c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-4.3l-6 3-6-3Z" fill="currentColor"/>
+              </svg>
+              <span>CGPA / 10</span>
+            </div>
+          </div>
+
+          <div class="stat stat--green">
+            <div class="stat__value">5+</div>
+            <div class="stat__sub">
+              <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 4h9a3 3 0 0 1 3 3v11.5a.5.5 0 0 1-.8.4A5.8 5.8 0 0 0 14 18H6a2 2 0 0 0 0 4h9a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H6a2 2 0 0 0 0 4h8v2H6A4 4 0 1 1 6 4Z" fill="currentColor"/>
+              </svg>
+              <span>Projects</span>
+            </div>
+          </div>
+
+          <div class="stat stat--purple">
+            <div class="stat__value">1+</div>
+            <div class="stat__sub">
+              <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-8 1a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-3.3 0-6 1.7-6 3.8V21h8v-2.2c0-2.1-2.7-3.8-6-3.8Zm8 0c-.7 0-1.4.1-2 .3a5.1 5.1 0 0 1 3 3.5V21h8v-2.2c0-2.1-2.7-3.8-6-3.8Z" fill="currentColor"/>
+              </svg>
+              <span>Years in Projects</span>
+            </div>
+          </div>
+
+          <div class="stat stat--orange">
+            <div class="stat__value">100%</div>
+            <div class="stat__sub">
+              <svg class="stat__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 12h4l3-8 4 16 3-8h4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Dedication</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="btn btn--pink about__resume" href="resume.pdf" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Skills -->
   <section class="work" id="skills">
     <div class="row">
       <h2>Skills &amp; Expertise</h2>
-      <p class="muted">Edit the names & percentages in HTML — bars will animate automatically.</p>
+      <p class="muted">Bars are just visual; edit percentages in HTML.</p>
 
       <div class="skills__grid">
         <div class="skill">
-          <div class="skill__head">
-            <h3>Programming</h3>
-          </div>
+          <div class="skill__head"><h3>Programming</h3></div>
           <div class="skill__row"><span>Python</span><span>85%</span></div>
-          <div class="skill__bar" data-percent="85"><span class="skill__fill"></span></div>
+          <div class="skill__bar"><span class="skill__fill" style="inset:0 15% 0 0"></span></div>
 
           <div class="skill__row"><span>JavaScript</span><span>80%</span></div>
-          <div class="skill__bar" data-percent="80"><span class="skill__fill"></span></div>
+          <div class="skill__bar"><span class="skill__fill" style="inset:0 20% 0 0"></span></div>
 
           <div class="skill__row"><span>C++</span><span>65%</span></div>
-          <div class="skill__bar" data-percent="65"><span class="skill__fill"></span></div>
+          <div class="skill__bar"><span class="skill__fill" style="inset:0 35% 0 0"></span></div>
         </div>
 
         <div class="skill">
           <div class="skill__head"><h3>Frameworks</h3></div>
           <div class="skill__row"><span>React.js</span><span>80%</span></div>
-          <div class="skill__bar" data-percent="80"><span class="skill__fill"></span></div>
+          <div class="skill__bar"><span class="skill__fill" style="inset:0 20% 0 0"></span></div>
 
           <div class="skill__row"><span>Next.js</span><span>75%</span></div>
-          <div class="skill__bar" data-percent="75"><span class="skill__fill"></span></div>
+          <div class="skill__bar"><span class="skill__fill" style="inset:0 25% 0 0"></span></div>
 
           <div class="skill__row"><span>TensorFlow</span><span>60%</span></div>
-          <div class="skill__bar" data-percent="60"><span class="skill__fill"></span></div>
+          <div class="skill__bar"><span class="skill__fill" style="inset:0 40% 0 0"></span></div>
         </div>
 
         <div class="skill">
-          <div class="skill__head"><h3>Cloud & DevOps</h3></div>
+          <div class="skill__head"><h3>Cloud &amp; DevOps</h3></div>
           <div class="skill__row"><span>AWS</span><span>75%</span></div>
-          <div class="skill__bar" data-percent="75"><span class="skill__fill"></span></div>
+          <div class="skill__bar"><span class="skill__fill" style="inset:0 25% 0 0"></span></div>
 
           <div class="skill__row"><span>REST APIs</span><span>85%</span></div>
-          <div class="skill__bar" data-percent="85"><span class="skill__fill"></span></div>
+          <div class="skill__bar"><span class="skill__fill" style="inset:0 15% 0 0"></span></div>
 
           <div class="skill__row"><span>Network Security</span><span>60%</span></div>
-          <div class="skill__bar" data-percent="60"><span class="skill__fill"></span></div>
+          <div class="skill__bar"><span class="skill__fill" style="inset:0 40% 0 0"></span></div>
         </div>
       </div>
     </div>
@@ -183,40 +171,35 @@
   <section class="work" id="projects">
     <div class="row">
       <h2>Projects</h2>
+
       <div class="work__boxes">
-        <a class="work__box" href="https://github.com/your-username/aistronomy" target="_blank">
+        <a class="work__box" href="#" target="_blank">
           <div class="work__text">
-            <h3>AIstronomy: A New Era of Space Discovery</h3>
-            <ul class="work__list">
-              <li>Slides</li><li>Case Studies</li><li>Live Demo</li>
-            </ul>
-            <span class="link__text">Open <span>↗</span></span>
+            <h3>AIstronomy: Space Forecasts</h3>
+            <ul class="work__list"><li>Transformers</li><li>Timeseries</li><li>Case Study</li></ul>
+            <span class="link__text">Open ↗</span>
           </div>
           <div class="work__image-box">
             <img class="work__image" src="project1.jpg" alt="AIstronomy">
           </div>
         </a>
 
-        <a class="work__box" href="https://github.com/your-username/job-matching" target="_blank">
+        <a class="work__box" href="#" target="_blank">
           <div class="work__text">
-            <h3>Job Matching System (Graph-Based)</h3>
-            <ul class="work__list">
-              <li>Hungarian Algorithm</li><li>Python</li><li>Graphs</li>
-            </ul>
-            <span class="link__text">Open <span>↗</span></span>
+            <h3>Job Matching (Graph-Based)</h3>
+            <ul class="work__list"><li>Hungarian</li><li>Python</li><li>Graphs</li></ul>
+            <span class="link__text">Open ↗</span>
           </div>
           <div class="work__image-box">
             <img class="work__image" src="project2.jpg" alt="Job Matching">
           </div>
         </a>
 
-        <a class="work__box" href="https://github.com/your-username/aws-rekognition" target="_blank">
+        <a class="work__box" href="#" target="_blank">
           <div class="work__text">
             <h3>Image Recognition on AWS</h3>
-            <ul class="work__list">
-              <li>Lambda</li><li>Rekognition</li><li>S3</li>
-            </ul>
-            <span class="link__text">Open <span>↗</span></span>
+            <ul class="work__list"><li>Lambda</li><li>Rekognition</li><li>S3</li></ul>
+            <span class="link__text">Open ↗</span>
           </div>
           <div class="work__image-box">
             <img class="work__image" src="project3.jpg" alt="AWS Recognition">
@@ -239,17 +222,23 @@
     </div>
   </section>
 
-  <!-- Footer / Back to top -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="row">
-      <ul class="footer__social-links">
-        <li><a href="#home">Back to top</a></li>
-      </ul>
       <p>© <span id="y"></span> Devansh Patira</p>
+      <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
     </div>
-    <a href="#home" class="back-to-top" id="backTop" aria-label="Back to top">↑</a>
   </footer>
 
-  <script src="index.js"></script>
+  <script>
+    // year + smooth scroll
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
 </body>
 </html>
