@@ -450,3 +450,48 @@ section[id] { scroll-margin-top: 80px; }               /* matches your header he
   transform:translateY(-1px);
   transition:.15s ease;
 }
+
+
+/* Highlights unified grid (stats + icons) */
+.hl-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:12px;
+  margin-top:10px;
+}
+
+/* Stat tiles moved into Highlights */
+.stat-badge{
+  border:1px solid var(--border);
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+  border-radius:14px;
+  padding:12px 14px;
+  box-shadow:var(--shadow-1);
+  display:grid;gap:4px;
+}
+.stat-num{
+  font-size:1.25rem;
+  font-weight:800;
+  letter-spacing:.02em;
+}
+.stat-label{
+  font-size:.9rem;
+  color:var(--muted);
+}
+
+/* Icon badges (kept from earlier) */
+.icon-badge{
+  width:44px;height:44px;border-radius:12px;
+  display:grid;place-items:center;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  box-shadow:var(--shadow-1);
+  justify-self:start;              /* align left inside the grid cell */
+}
+.icon-badge svg{width:20px;height:20px;fill:currentColor;opacity:.9}
+.icon-badge:hover{
+  background:color-mix(in oklab,var(--primary) 18%, transparent);
+  transform:translateY(-1px);
+  transition:.15s ease;
+}
