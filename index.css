@@ -357,3 +357,25 @@ body{
 
 /* Make sure the next section starts clearly as its own "page" */
 #contact { padding-top: 72px; }
+
+
+/* ===== One-section-per-page scrolling ===== */
+
+/* Make sections you choose snap to the top of the viewport */
+main { scroll-snap-type: y proximity; }                /* smooth; not too aggressive */
+.page {                                                /* add this class to chosen sections */
+  min-height: 100svh;                                  /* full viewport height (safe on mobile) */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;                            /* don't land between pages */
+  display: block;                                      /* keep your current layout */
+  padding-block: 72px 64px;                            /* room around content (top/bottom) */
+}
+
+/* Sticky header offset when jumping via nav anchors */
+section[id] { scroll-margin-top: 80px; }               /* matches your header height */
+
+/* Optional: turn off snapping on small screens if you prefer */
+@media (max-width: 700px) {
+  main { scroll-snap-type: none; }
+  .page { min-height: auto; }
+}
