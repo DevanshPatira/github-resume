@@ -411,3 +411,21 @@ section[id] { scroll-margin-top: 80px; }               /* matches your header he
 #contact .grid-2 {
   gap: 16px;                      /* reduce space between the two boxes */
 }
+
+/* Contact section adjustment */
+#contact.section {
+  padding-bottom: 30px;   /* reduce space below contact box */
+  margin-bottom: 0;       /* remove extra margin */
+}
+
+/* Container inside contact */
+#contact .container {
+  margin-bottom: 0;       /* stop pushing footer down */
+  padding-bottom: 0;
+}
+
+/* Footer adjustment */
+.site-footer {
+  margin-top: 0;          /* remove space above footer */
+  padding-top: 30px;      /* small breathing space */
+}
