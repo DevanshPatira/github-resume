@@ -301,3 +301,59 @@ body{
   border-color: transparent;
   color: #fff;
 }
+
+/* ===== Certifications as one-page block ===== */
+#certs {
+  padding-top: 64px;          /* tidy spacing above */
+  padding-bottom: 56px;       /* tidy spacing below */
+}
+
+/* Slightly smaller heading/subtitle for this section */
+#certs .h2 {
+  font-size: clamp(1.2rem, 1.7vw, 1.6rem);
+  margin-bottom: 6px;
+}
+#certs > .container > p.muted {
+  font-size: .95rem;
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+/* Widen only this section so 3 columns fit nicely on desktop */
+#certs .container { max-width: 1280px; }
+
+/* 3 columns on large screens → fits more content per row */
+.cards.certs {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;                  /* tighter grid */
+  margin-top: 16px;
+}
+
+/* Back to 2 columns on laptops/tablets */
+@media (max-width: 1100px) {
+  .cards.certs { grid-template-columns: repeat(2, 1fr); }
+}
+/* 1 column on mobile */
+@media (max-width: 700px) {
+  .cards.certs { grid-template-columns: 1fr; }
+}
+
+/* Compact card internals */
+.cert-card .cert-head { gap: 10px; align-items: flex-start; }
+.cert-card .card-body { padding: 10px; gap: 8px; }
+.cert-card h3.h3 { font-size: .98rem; margin: 0 0 4px; }
+.cert-card p.muted { font-size: .86rem; line-height: 1.45; margin: 0 0 8px; }
+.cert-card .tags li { font-size: .7rem; padding: 3px 7px; }
+.cert-card .btn.small { padding: 5px 10px; font-size: .8rem; border-radius: 8px; }
+
+/* Smaller icon badge */
+.cert-icon {
+  width: 34px; height: 34px; border-radius: 10px;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--border);
+}
+.cert-icon .icon-sm { width: 16px; height: 16px; }
+
+/* Make sure the next section starts clearly as its own "page" */
+#contact { padding-top: 72px; }
