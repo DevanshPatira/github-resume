@@ -227,17 +227,73 @@ body{
 /* ===== A11y helper ===== */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-/* ===== Certifications layout & icon badge ===== */
-.cards.certs { grid-template-columns: repeat(2,1fr); }
-@media (max-width:1000px){ .cards.certs{ grid-template-columns:1fr } }
-.cert-card .cert-head{ display:flex; gap:16px; align-items:flex-start; }
+/* ===== Certifications (compact) ===== */
+#certs .h2{
+  /* slightly smaller section title to balance the tighter cards */
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  margin-bottom: 6px;
+}
+#certs > .container > p.muted{
+  font-size: .95rem;
+  margin: 0 0 10px;
+}
+
+.cards.certs {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;                 /* tighter grid spacing */
+  margin-top: 16px;
+}
+@media (max-width:1000px){
+  .cards.certs{ grid-template-columns:1fr; }
+}
+
+.cert-card .cert-head{
+  display: flex;
+  gap: 12px;                 /* a bit tighter than 16px */
+  align-items: flex-start;
+}
+
+.cert-card .card-body{
+  padding: 12px;             /* down from 16px */
+  gap: 8px;
+}
+
+.cert-card h3.h3{
+  font-size: 1rem;           /* smaller heading */
+  margin: 0 0 4px;
+}
+
+.cert-card p.muted{
+  font-size: .88rem;         /* compact description */
+  line-height: 1.45;
+  margin: 0 0 8px;
+}
+
+.cert-card .tags li{
+  font-size: .72rem;         /* smaller pills */
+  padding: 3px 8px;
+}
+
+.cert-card .btn.small{
+  padding: 5px 10px;         /* compact button */
+  font-size: .8rem;
+  border-radius: 8px;
+}
+
+/* Smaller certificate icons */
 .cert-icon{
-  width:44px; height:44px; border-radius:12px;
-  display:grid; place-items:center;
+  width: 36px;               /* was 44px */
+  height: 36px;
+  border-radius: 10px;
+  display: grid; place-items: center;
   background: rgba(255,255,255,.05);
   border: 1px solid var(--border);
 }
-.cert-icon .icon-sm{ width:22px; height:22px; }
+.cert-icon .icon-sm{
+  width: 18px;               /* was 22px */
+  height: 18px;
+}
+
 
 /* WhatsApp hover color */
 .footer-social a[data-brand="whatsapp"]:hover {
