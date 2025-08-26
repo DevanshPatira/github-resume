@@ -429,3 +429,24 @@ section[id] { scroll-margin-top: 80px; }               /* matches your header he
   margin-top: 0;          /* remove space above footer */
   padding-top: 30px;      /* small breathing space */
 }
+
+.icon-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(44px,1fr));
+  gap:12px;
+  margin-top:10px;
+}
+.icon-badge{
+  width:44px;height:44px;border-radius:12px;
+  display:grid;place-items:center;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  box-shadow:var(--shadow-1);
+}
+.icon-badge svg{width:20px;height:20px;fill:currentColor;opacity:.9}
+.icon-badge:hover{
+  background:color-mix(in oklab,var(--primary) 18%, transparent);
+  transform:translateY(-1px);
+  transition:.15s ease;
+}
