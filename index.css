@@ -379,3 +379,35 @@ section[id] { scroll-margin-top: 80px; }               /* matches your header he
   main { scroll-snap-type: none; }
   .page { min-height: auto; }
 }
+
+/* ===== Contact Section Fix ===== */
+#contact .panel {
+  padding: 18px;                  /* smaller padding inside the boxes */
+}
+
+#contact .field input,
+#contact .field textarea {
+  padding: 10px 12px;             /* less vertical padding */
+  font-size: 0.95rem;             /* slightly smaller text */
+  border-radius: 10px;            /* softer corners */
+}
+
+#contact .field textarea {
+  min-height: 100px;              /* not too tall */
+  max-height: 140px;              /* limit growth */
+}
+
+#contact .form {
+  gap: 10px;                      /* tighter spacing between fields */
+}
+
+#contact .btn.primary {
+  padding: 10px 12px;             /* smaller Send Message button */
+  font-size: 0.95rem;
+  border-radius: 10px;
+}
+
+/* Make both left & right panels more compact */
+#contact .grid-2 {
+  gap: 16px;                      /* reduce space between the two boxes */
+}
